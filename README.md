@@ -52,3 +52,32 @@ Medical-Summarization-Research/
 5. Downloaded the medical image ZIP archive.
 6. Inspected the image archive contents.
 
+## Dataset Analysis
+
+**Dataset:** [MMCQSD – Multimodal Code-Mixed Question Summarization](https://huggingface.co/datasets/ArkaAcharya/MMCQSD)
+
+### Dataset Overview
+
+| Property | Value |
+|---|---:|
+| Total records | 3,015 |
+| Total columns | 3 |
+| Unique image paths | 372 |
+| Missing values | 0 |
+| Empty values | 0 |
+| Duplicate rows | 0 |
+| Missing image references | 0 |
+
+### Image Reuse Analysis
+
+- 372 unique image paths are referenced by 3,015 records.
+- 131 images have multiple extracted image descriptions.
+- 241 images have only one extracted description.
+- The most reused image appears in 673 records.
+- Another image appears in 124 records with 37 different descriptions.
+
+### Observation
+
+The dataset has complete structural records and valid image references. However, repeated image usage and variations in image descriptions indicate a potential image–text alignment limitation that requires further investigation.
+
+Original dataset files are preserved without modification.
