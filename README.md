@@ -81,3 +81,18 @@ Medical-Summarization-Research/
 The dataset has complete structural records and valid image references. However, repeated image usage and variations in image descriptions indicate a potential image–text alignment limitation that requires further investigation.
 
 Original dataset files are preserved without modification.
+
+
+## 🔒 Data Leakage Prevention via SHA-256 Hashing
+
+To prevent **data leakage** and ensure realistic model evaluation, we group our data split using exact file contents rather than filenames or metadata.
+
+### The Problem: Naive Splitting
+If identical image files exist under different names (e.g., `Image_3.jpg` and `Image_70.jpg`), a standard random split might place one in the training set and its twin in the test set. The model would "cheat" by memorizing pixels, leading to artificially high test accuracy.
+
+### The Solution: Hash Grouping
+We use **SHA-256 hashing** to map file contents to a unique identifier:
+* **Same SHA-256 Hash** = 100% identical file contents (even if filenames differ).
+* **Different SHA-256 Hash** = Different file contents (though they may still look visually similar).
+
+
