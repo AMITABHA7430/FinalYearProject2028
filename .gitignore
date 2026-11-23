@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Dataset - DO NOT UPLOAD
+data/
+*.parquet
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+checkpoints/
+models/
+
+# Experiment outputs
+outputs/
+results_cache/
+cache/
+wandb/
+runs/
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
